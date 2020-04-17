@@ -1,0 +1,9 @@
+---
+- name: Check Uptime with Shell command
+  shell:
+     "uptime"
+  register: uptimecmd
+  tags: uptimecmd
+
+- name: Getoutput
+  debug: msg="{{uptimecmd.stdout}}"

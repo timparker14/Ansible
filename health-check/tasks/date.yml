@@ -1,0 +1,9 @@
+---
+- name: Get Date      
+  shell:
+       "date"
+  register: datecmd
+  tags: datecmd
+  
+- name: Show Output  
+  debug: msg="{{datecmd.stdout}}"

@@ -1,0 +1,9 @@
+---
+- name: Check Free Memory with Shell command
+  shell:
+     "free -h"
+  register: freecmd
+  tags: freecmd
+
+- name: get output
+  debug: var=freecmd.stdout_lines

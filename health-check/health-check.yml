@@ -1,0 +1,10 @@
+---
+  - name: System Health Check
+    hosts: all
+    gather_facts: no
+    tasks:
+
+      - include: tasks/date.yml
+      - include: tasks/uptime.yml
+      - include: tasks/free-mem.yml
+      - include: tasks/filesystem.yml

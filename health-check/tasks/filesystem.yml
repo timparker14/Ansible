@@ -1,0 +1,9 @@
+---
+- name: Check Filesystems with Shell command
+  shell:
+     "df -h"
+  register: dfcmd
+  tags: dfcmd
+
+- name: get output
+  debug: var=dfcmd.stdout_lines
